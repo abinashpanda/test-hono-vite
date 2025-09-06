@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:wght@100..900&family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
+
+@import 'tailwindcss';
+
+@theme inline {
+  --color-background: var(--color-neutral-950);
+  --color-foreground: var(--color-neutral-50);
+  --color-muted: var(--color-neutral-800);
+  --color-muted-foreground: var(--color-neutral-400);
+  --color-primary: var(--color-emerald-600);
+  --color-primary-foreground: var(--color-emerald-50);
+  --font-sans: 'Geist', sans-serif;
+  --font-mono: 'Google Sans Code', monospace;
+  --font-display: 'Bricolage Grotesque', sans-serif;
+}
+
+@layer base {
+  html,
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}

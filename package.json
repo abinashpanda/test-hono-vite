@@ -3,14 +3,15 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "dev": "bun run --watch src/server/index.ts",
     "build": "bun --cwd src/client vite build",
+    "dev": "bun run --watch src/server/index.ts",
     "prestart": "bun run --bun build",
     "start": "NODE_ENV=production bun run src/server/index.ts"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.13",
     "@tanstack/router-plugin": "^1.131.35",
+    "@types/aws-lambda": "8.10.152",
     "@types/bun": "latest",
     "@types/react": "^19.1.12",
     "@types/react-dom": "^19.1.9",
@@ -30,7 +31,7 @@
     "pino-pretty": "^13.1.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "sst": "^3.17.12",
+    "sst": "3.17.12",
     "vite": "^7.1.4",
     "zod": "^4.1.5"
   }

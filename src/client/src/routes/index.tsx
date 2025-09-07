@@ -14,7 +14,9 @@ function Home() {
   const { name } = Route.useLoaderData()
 
   useEffect(() => {
-    ws.send(JSON.stringify({ type: 'ping' }))
+    ws.addEventListener('open', () => {
+      ws.send(JSON.stringify({ type: 'ping' }))
+    })
   }, [])
 
   return (
